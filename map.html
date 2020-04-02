@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Map</title>
+</head>
+
+<body onload="onInitMapPage()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">My map</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse my-nav-bar" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user-prefs.html">User pref</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="map.html">Map</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="map"></div>
+    <img src="img/current-location.png" alt="current-location" class='current-location' onclick="onGetCurrLocation()">
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">lat</th>
+            <th scope="col">lng</th>
+            <th scope="col">Name</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody class="location-list"></tbody>
+      </table>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHHELQCDgVkfwGZaIDt6LoVfeTEkba-b0&callback=initMap">
+        </script>
+    <script src="js/mapStorage.js"></script>
+    <script src="js/utilService.js"></script>
+    <script src="js/userPrefService.js"></script>
+    <script src="js/placeService.js"></script>
+    <script src="js/userController.js"></script>
+</body>
+
+</html>

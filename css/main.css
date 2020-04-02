@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.my-nav-bar{
+    justify-content: center;
+    font-size: 17px;
+}
+
+.background img, .pref-background img{
+    position: absolute;
+    opacity: 0.3;
+    height: 94vh;
+    width: 100%;
+}
+
+.background h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 200px;
+    z-index: 1;
+    color: rgb(63, 63, 63);
+}
+
+.user-pref{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 600px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.user-pref button{
+    width: 200px;
+    align-self: center;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    transition: .25s;
+    padding: 5px;
+}
+
+.user-pref button:hover{
+    padding: 5px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.astrological{
+    position: absolute;
+    width: 800px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#map{
+    width: 100%;
+    height: 600px;
+}
+
+.current-location{
+    position: absolute;
+    top: 160px;
+    left: 15px;
+    cursor: pointer;
+}
